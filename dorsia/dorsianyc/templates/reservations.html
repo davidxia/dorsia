@@ -1,1 +1,43 @@
 {% extends "application.html" %}
+
+{% block content %}
+      <form>
+        <fieldset>
+          <legend>Make a reserveration</legend>
+
+          <div class="clearfix">
+            <label for="fullname" style="width:130px; float:left; text-align:right; line-height:18px; padding-top:6px;">Full name:</label>
+            <div class="input" style="margin-left:150px;">
+              <input class="xlarge" id="fullname" name="fullname" size="30" type="text" />
+            </div>
+          </div>
+
+          <div>
+            <label for="partysize" style="width:130px; float:left; text-align:right; line-height:18px; padding-top:6px;">Number of people:</label>
+            <div class="input" style="margin-left:150px;">
+              <select name="partysize" id = "partysize">
+                {% for i in partySizes %}
+                <option>{{ i }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="date" style="width:130px; float:left; text-align:right; line-height:18px; padding-top:6px;">Date:</label>
+            <div class="inline-inputs" style="margin-left:150px;">
+              <input data-datepicker="datepicker" class="small" type="text" value="{% now "SHORT_DATE_FORMAT" %}" />
+              <input class="mini" type="text" value="{% now "h:iA" %}" />
+              to
+              <input data-datepicker="datepicker" class="small" type="text" value="{% now "SHORT_DATE_FORMAT" %}" />
+              <input class="mini" type="text" value="{{ endTime|time:"h:iA" }}" />
+              <span class="help-block">All times are shown as Eastern Standard Time (GMT-05:00).</span>
+            </div>
+          </div>
+
+          <div class="actions">
+            <input type="submit" class="btn-primary" value="Submit" />
+          </div>
+        </fieldset>
+      </form>
+{% endblock content %}

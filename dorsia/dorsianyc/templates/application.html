@@ -12,8 +12,24 @@
         padding-top: 60px;
         padding-bottom: 40px;
       }
+      input.small {
+        width: 90px;
+      }
+      input.mini {
+        width: 60px;
+      }
+      .actions {
+        background: #F5F5F5;
+        margin: 18px 0;
+        padding: 17px 20px 18px 150px;
+        border-top: 1px solid #DDD;
+        -webkit-border-radius: 0 0 3px 3px;
+        -moz-border-radius: 0 0 3px 3px;
+        border-radius: 0 0 3px 3px;
+      }
     </style>
     <link href="{% static "css/bootstrap-responsive.css" %}" media="all" rel="stylesheet" type="text/css" />
+    <link href="{% static "css/bootstrap-datepicker.css" %}" media="all" rel="stylesheet" type="text/css" />
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -45,15 +61,8 @@
     </div>
 
     <div class="container">
-      <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
-        <h1>Dorsia</h1>
-        <p>This is a template for a simple marketing or informational website.
-        It includes a large callout called the hero unit and three supporting
-        pieces of content. Use it as a starting point to create something more
-        unique.</p>
-        <p><a class="btn btn-inverse btn-primary btn-large">Make a reservation &raquo;</a></p>
-      </div>
+      {% block content %}
+      {% endblock content %}
 
       <footer>
       <p>&copy; Dorsia {% now "Y" %}</p>
@@ -66,6 +75,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
     <script src="{% static "js/bootstrap.min.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/bootstrap-datepicker.js" %}" type="text/javascript"></script>
 
   </body>
 </html>

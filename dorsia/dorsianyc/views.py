@@ -1,3 +1,5 @@
+import datetime
+
 from django.http import HttpResponse
 from django.template import RequestContext
 from django.shortcuts import render_to_response
@@ -15,8 +17,15 @@ def menu( request ):
         context_instance = RequestContext( request ) )
 
 def reservations( request ):
+    """
+    Datepicker adapted from http://dl.dropbox.com/u/143355/datepicker/datepicker.html
+    """
+
+    partySizes = range( 1, 21 )
+    endTime = datetime.datetime.now() + datetime.timedelta( hours = 2 )
+
     return render_to_response(
         "reservations.html",
-        dict( currentPage = "reservations" ),
+        dict( currentPage = "reservations", partySizes = partySizes, endTime = endTime ),
         context_instance = RequestContext( request ) )
 
