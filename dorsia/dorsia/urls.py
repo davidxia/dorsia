@@ -14,5 +14,6 @@ urlpatterns = patterns("",
     url( r"^$", "dorsianyc.views.home", name = "home" ),
     url( r"^menu$", "dorsianyc.views.menu", name = "menu" ),
     url( r"^reservations$", "dorsianyc.views.reservations", name = "reservations" ),
+    url( r"^reviews$", "dorsianyc.views.reviews", name = "reviews" ),
 
 )

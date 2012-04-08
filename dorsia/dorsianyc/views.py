@@ -29,3 +29,8 @@ def reservations( request ):
         dict( currentPage = "reservations", partySizes = partySizes, endTime = endTime ),
         context_instance = RequestContext( request ) )
 
+def reviews( request ):
+    return render_to_response(
+        "reviews.html",
+        dict( currentPage = "reviews" ),
+        context_instance = RequestContext( request ) )
