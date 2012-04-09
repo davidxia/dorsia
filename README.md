@@ -15,7 +15,7 @@ Clone repo, setup virtualenv, and install prerequisite modules:
     cd dorsia/dorsia
     virtualenv env
     source env/bin/activate
-    pip install django psycopg2
+    ./pip/install.py
 
 
 To install virtualenv:
