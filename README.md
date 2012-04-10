@@ -3,7 +3,7 @@ HTML, CSS, JS, and static content for Dorsia NYC's website.
 Freelance work, charged them $3 million.  Good thing they have clients with deep pockets.
 
 
-Setup instructions
+Setup instructions for local environment
 ====================================================================================================
 
 Django1.4. Server's running python 2.6.5
