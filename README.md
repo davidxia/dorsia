@@ -20,9 +20,22 @@ Clone repo, setup virtualenv, and install prerequisite modules:
 
 To install virtualenv:
 ----------------------------------------------------------------------------------------------------
+
     (sudo) pip install virtualenv
 
 To install pip:
 ----------------------------------------------------------------------------------------------------
+
     curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python
     (http://www.pip-installer.org/en/latest/installing.html)
+
+Install postgres
+----------------------------------------------------------------------------------------------------
+
+If you're using Mac OS X, first install Homebrew:
+
+    /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+
+Then install PostgreSQL:
+
+    brew install postgresql
