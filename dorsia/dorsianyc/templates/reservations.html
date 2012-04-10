@@ -1,42 +1,55 @@
 {% extends "application.html" %}
 
+{% comment %} Datepicker adapted from http://dl.dropbox.com/u/143355/datepicker/datepicker.html {% endcomment %}
+
 {% block content %}
-      <form>
+      <h1>Reservations</h1>
+      <form action="{% url reservations %}" method="post" id="reservation-form">
+        {% csrf_token %}
+
         <fieldset>
-          <legend>Make a reserveration</legend>
+          <legend>Make a reservation</legend>
+          {{ form.non_field_errors }}
 
-          <div class="clearfix">
-            <label for="fullname" style="width:130px; float:left; text-align:right; line-height:18px; padding-top:6px;">Full name:</label>
-            <div class="input" style="margin-left:150px;">
-              <input class="xlarge" id="fullname" name="fullname" size="30" type="text" />
+          <div class="row">
+            <label for="id_name">Full name:</label>
+            <div class="input">
+              {{ form.name }}
             </div>
+            {{ form.name.errors }}
           </div>
 
-          <div>
-            <label for="partysize" style="width:130px; float:left; text-align:right; line-height:18px; padding-top:6px;">Number of people:</label>
-            <div class="input" style="margin-left:150px;">
-              <select name="partysize" id = "partysize">
-                {% for i in partySizes %}
-                <option>{{ i }}</option>
-                {% endfor %}
-              </select>
+          <div class="row">
+            <label for="id_email">Email:</label>
+            <div class="input">
+              {{ form.email }}
             </div>
+            {{ form.email.errors }}
           </div>
 
-          <div>
-            <label for="date" style="width:130px; float:left; text-align:right; line-height:18px; padding-top:6px;">Date:</label>
-            <div class="inline-inputs" style="margin-left:150px;">
-              <input data-datepicker="datepicker" class="small" type="text" value="{% now "SHORT_DATE_FORMAT" %}" />
-              <input class="mini" type="text" value="{% now "h:iA" %}" />
-              to
-              <input data-datepicker="datepicker" class="small" type="text" value="{% now "SHORT_DATE_FORMAT" %}" />
-              <input class="mini" type="text" value="{{ endTime|time:"h:iA" }}" />
-              <span class="help-block">All times are shown as Eastern Standard Time (GMT-05:00).</span>
+          <div class="row">
+            <label for="id_partySize">Party size:</label>
+            <div class="input">
+              {{ form.partySize }}
             </div>
+            {{ form.partySize.errors }}
+          </div>
+
+          <div class="row">
+            <label for="reservationDate">Date:</label>
+            <div class="input">
+              <input id="reservationDate" name="reservationDate" data-datepicker="datepicker" class="small" type="text" value="{% now "Y-m-d" %}" />
+              {{ form.seatingTime }} PM
+            </div>
+            {% if form.reservationDate.errors %}
+              {{ form.reservationDate.errors }}
+            {% else %}{% if form.seatingTime.errors %}
+              {{ form.seatingTime.errors }}
+            {% endif %}{% endif %}
           </div>
 
           <div class="actions">
-            <input type="submit" class="btn-primary" value="Submit" />
+            <input type="submit" class="btn btn-large" value="Submit" />
           </div>
         </fieldset>
       </form>
