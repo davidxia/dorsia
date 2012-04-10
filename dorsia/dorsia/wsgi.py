@@ -16,10 +16,14 @@ framework.
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))
+# Add the virtual Python environment site-packages directory to the path
+sys.path.insert( 0,  os.path.abspath( os.path.join( os.path.dirname( __file__ ),
+                                                    "../env/lib/python2.6/site-packages" ) ) )
+# Add project and apps to the path
+sys.path.insert( 0, os.path.abspath( os.path.join( os.path.dirname( __file__ ), "../../" ) ) )
+sys.path.insert( 0, os.path.abspath( os.path.join( os.path.dirname( __file__ ), "../" ) ) )
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "dorsia.settings")
+os.environ.setdefault( "DJANGO_SETTINGS_MODULE", "dorsia.settings" )
 
 # This application object is used by any WSGI server configured to use this
 # file. This includes Django's development server, if the WSGI_APPLICATION
