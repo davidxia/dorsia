@@ -7,29 +7,9 @@
 
     <!-- Le styles -->
     <link href="{% static "css/bootstrap.css" %}" media="all" rel="stylesheet" type="text/css" />
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      input.small {
-        width: 90px;
-      }
-      input.mini {
-        width: 60px;
-      }
-      .actions {
-        background: #F5F5F5;
-        margin: 18px 0;
-        padding: 17px 20px 18px 150px;
-        border-top: 1px solid #DDD;
-        -webkit-border-radius: 0 0 3px 3px;
-        -moz-border-radius: 0 0 3px 3px;
-        border-radius: 0 0 3px 3px;
-      }
-    </style>
     <link href="{% static "css/bootstrap-responsive.css" %}" media="all" rel="stylesheet" type="text/css" />
     <link href="{% static "css/bootstrap-datepicker.css" %}" media="all" rel="stylesheet" type="text/css" />
+    <link href="{% static "css/application.css" %}" media="all" rel="stylesheet" type="text/css" />
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -72,7 +52,9 @@
       {% endblock content %}
 
       <footer>
-      <p>&copy; Dorsia {% now "Y" %}</p>
+      <p><span>5 East 19th Street (btwn 5th &amp; Broadway), New York, NY 10003</span>
+      &#124; <span>646.480.6046</span> &#124; <span>&copy; Dorsia {% now "Y" %}</span>
+      </p>
       </footer>
 
     <div> <!-- /container -->

@@ -1,0 +1,44 @@
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background-color: #222;
+  color: #EFEFEF; }
+.navbar .nav > li > a {
+  color: #CCC; }
+.hero-unit {
+  background-color: #555; }
+input.small {
+  width: 110px; }
+select#id_seatingTime {
+  width: 75px; }
+.actions {
+  margin: 18px 0;
+  padding: 10px 20px 18px 120px;
+  -webkit-border-radius: 0 0 3px 3px;
+  -moz-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px; }
+footer {
+  margin: 30px 0; }
+footer span {
+  margin: 0 10px; }
+legend, label, .help-block, .help-inline {
+  color: #EFEFEF; }
+form {
+  margin-top: 20px; }
+form div.row {
+  padding-top: 20px; }
+form#reservation-form label {
+  width:130px;
+  float:left;
+  text-align:right;
+  line-height:18px;
+  padding-top:6px; }
+form#reservation-form div.row div.input {
+  margin-left: 20px;
+  float: left; }
+ul.errorlist {
+  color: red;
+  list-style: none;
+  float: left;
+  padding-top: 6px;
+  line-height: 18px; }
