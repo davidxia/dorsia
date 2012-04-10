@@ -36,6 +36,7 @@ def run_env( cmd ):
 # System tasks
 # --------------------------------------------------------------------------------------------------
 
+@task( default = True )
 def setup_env( clean = None ):
     """
     Set up the virtualenv required to run the server.
