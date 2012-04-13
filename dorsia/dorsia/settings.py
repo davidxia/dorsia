@@ -128,6 +128,7 @@ INSTALLED_APPS = (
     "django.contrib.staticfiles",
     "dorsianyc",
     "django.contrib.admin",
+    "django_nose",
     # Uncomment the next line to enable admin documentation:
     # "django.contrib.admindocs",
 )
@@ -160,3 +161,6 @@ LOGGING = {
         },
     }
 }
+
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+os.environ['REUSE_DB'] = "1"
