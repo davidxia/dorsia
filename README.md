@@ -39,3 +39,10 @@ If you're using Mac OS X, first install Homebrew:
 Then install PostgreSQL:
 
     brew install postgresql
+
+Testing
+====================================================================================================
+
+Yes, we have tests. We sleep really well at night. To run the tests:
+
+    ./dorsia/manage.py tests
