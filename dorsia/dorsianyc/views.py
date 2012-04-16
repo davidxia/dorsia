@@ -30,12 +30,12 @@ def reservations( request ):
         form = ReservationForm( request.POST )
         if form.is_valid():
             form.save()
+            form = None
     else:
         form = ReservationForm()
 
 
-    data = dict( currentPage = "reservations",
-                 form = form )
+    data = dict( currentPage = "reservations", form = form )
 
     return render_to_response(
         "reservations.html",

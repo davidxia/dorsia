@@ -3,6 +3,7 @@
 {% comment %} Datepicker adapted from http://dl.dropbox.com/u/143355/datepicker/datepicker.html {% endcomment %}
 
 {% block content %}
+      {% if form %}
       <h1>Reservations</h1>
       <form action="{% url reservations %}" method="post" id="reservation-form">
         {% csrf_token %}
@@ -53,4 +54,7 @@
           </div>
         </fieldset>
       </form>
+      {% else %}
+      <p>Thanks for making reservations. We'll let you know if spots open up within a year.</p>
+      {% endif %}
 {% endblock content %}
