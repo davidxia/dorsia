@@ -1,7 +1,3 @@
-HTML, CSS, JS, and static content for Dorsia NYC's website.
-
-Freelance work, charged them $3 million.  Good thing they have clients with deep pockets.
-
 
 Setup instructions for local environment
 ====================================================================================================
@@ -45,4 +41,4 @@ Testing
 
 Yes, we have tests. We sleep really well at night. To run the tests:
 
-    ./dorsia/manage.py tests
+    ./manage.py tests

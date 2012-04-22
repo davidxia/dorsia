@@ -15,7 +15,7 @@ env.hosts = ["dx"]
 
 # Codebase's installation path in hosts
 env.code_dir = "/home/david/dorsia"
-env.project_root = "/home/david/dorsia/dorsia"
+env.project_root = "/home/david/dorsia"
 
 
 # --------------------------------------------------------------------------------------------------
