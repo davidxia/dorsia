@@ -129,6 +129,7 @@ INSTALLED_APPS = (
     "dorsia",
     "django.contrib.admin",
     "django_nose",
+    "south",
     # Uncomment the next line to enable admin documentation:
     # "django.contrib.admindocs",
 )
