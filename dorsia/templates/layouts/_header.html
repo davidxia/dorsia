@@ -1,26 +1,26 @@
 {% load staticfiles %}
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="/">Dorsia</a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li class="{% if "menu" == currentPage %}active{% endif %}">
-                <a href="{% url menu %}">Menu</a>
-              </li>
-              <li class="{% if "reservations" == currentPage %}active{% endif %}">
-                <a href="{% url reservations %}">Reservations</a>
-              </li>
-              <li class="{% if "reviews" == currentPage %}active{% endif %}">
-                <a href="{% url reviews %}">Reviews</a>
-              </li>
-            </ul>
-          </div> <!-- /.nav-collapse -->
-        </div>
-      </div>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="/">Dorsia</a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li class="{% if "menu" == currentPage %}active{% endif %}">
+          <a href="{% url menu %}">Menu</a>
+          </li>
+          <li class="{% if "reservations" == currentPage %}active{% endif %}">
+          <a href="{% url reservations %}">Reservations</a>
+          </li>
+          <li class="{% if "reviews" == currentPage %}active{% endif %}">
+          <a href="{% url reviews %}">Reviews</a>
+          </li>
+        </ul>
+      </div> <!-- /.nav-collapse -->
     </div>
+  </div>
+</div>

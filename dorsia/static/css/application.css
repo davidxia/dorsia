@@ -4,11 +4,21 @@ body {
   background-color: #222;
   color: #EFEFEF;
 }
-img {
-  max-width: 100%;
-}
 .hero-unit {
   background-color: #555;
+}
+.hero-unit h1 {
+  font-weight: normal;
+  margin-bottom: .5em;
+}
+.hero-unit img {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  margin-top: 2em;
+  -moz-box-shadow:    1px 1px 1px 1px black;
+  -webkit-box-shadow: 1px 1px 1px 1px black;
+  box-shadow:         1px 1px 1px 1px black;
 }
 input.small {
   width: 110px;
@@ -73,15 +83,20 @@ ul.errorlist {
   padding-top: 20px;
   text-shadow: none;
 }
+.review-link {
+  font-size: 1.5em;
+}
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width: 320px)
-and (max-device-width : 480px) {
+@media screen and (max-width : 480px) {
+  .hero-unit {
+    font-size: 14px;
+    padding: 30px;
+  }
   .hero-unit h1 {
     font-size: 40px;
   }
-  .hero-unit {
-    font-size: 14px;
+  .btn-large {
+    font-size: 16px;
   }
 }
