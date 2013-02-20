@@ -1,4 +1,7 @@
-"""
+# -*- coding: utf-8 -*-
+
+
+'''
 WSGI config for dorsia project.
 
 This module contains the WSGI application used by Django's development server
@@ -12,18 +15,18 @@ that later delegates to the Django one. For example, you could introduce WSGI
 middleware here, or combine a Django application with an application of another
 framework.
 
-"""
+'''
 import os
 import sys
 
 # Add the virtual Python environment site-packages directory to the path
-sys.path.insert( 0,  os.path.abspath( os.path.join( os.path.dirname( __file__ ),
-                                                    "../env/lib/python2.6/site-packages" ) ) )
+sys.path.insert(0,  os.path.abspath(os.path.join(os.path.dirname(__file__),
+                                                 '../env/lib/python2.6/site-packages')))
 # Add project and apps to the path
-sys.path.insert( 0, os.path.abspath( os.path.join( os.path.dirname( __file__ ), "../../" ) ) )
-sys.path.insert( 0, os.path.abspath( os.path.join( os.path.dirname( __file__ ), "../" ) ) )
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../')))
 
-os.environ.setdefault( "DJANGO_SETTINGS_MODULE", "dorsia.settings" )
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dorsia.settings')
 
 # This application object is used by any WSGI server configured to use this
 # file. This includes Django's development server, if the WSGI_APPLICATION

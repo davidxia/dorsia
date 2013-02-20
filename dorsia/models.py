@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 from datetime import datetime
 
 from django.forms import ModelForm
@@ -19,8 +22,8 @@ class Reservation(models.Model):
     updatedAt = models.DateTimeField(auto_now=True, null=True)
 
     def __unicode__(self):
-        return "%s, party of %d, %s %d" % (self.name, self.partySize,
-                                           datetime.strftime(self.reservationDate, "%Y-%m-%d"),
+        return '%s, party of %d, %s %d' % (self.name, self.partySize,
+                                           datetime.strftime(self.reservationDate, '%Y-%m-%d'),
                                            self.seatingTime)
 
 

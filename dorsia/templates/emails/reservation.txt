@@ -1,0 +1,9 @@
+Dear {{ name }},
+
+This email confirms your {{ seating_time }} PM reservation on
+{{ reservation_date|date:'F j, Y' }} for a party of {{ party_size }}
+at Dorsia.
+
+We look forward to having you,
+
+- Dorsia
