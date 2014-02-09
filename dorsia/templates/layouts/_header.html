@@ -11,13 +11,13 @@
       <div class="nav-collapse">
         <ul class="nav">
           <li class="{% if "menu" == currentPage %}active{% endif %}">
-          <a href="{% url menu %}">Menu</a>
+          <a href="{% url "menu" %}">Menu</a>
           </li>
           <li class="{% if "reservations" == currentPage %}active{% endif %}">
-          <a href="{% url reservations %}">Reservations</a>
+          <a href="{% url "reservations" %}">Reservations</a>
           </li>
           <li class="{% if "reviews" == currentPage %}active{% endif %}">
-          <a href="{% url reviews %}">Reviews</a>
+          <a href="{% url "reviews" %}">Reviews</a>
           </li>
         </ul>
       </div> <!-- /.nav-collapse -->

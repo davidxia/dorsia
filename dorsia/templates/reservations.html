@@ -5,7 +5,7 @@
 {% block content %}
       {% if form %}
       <h1>Reservations</h1>
-      <form action="{% url reservations %}" method="post" id="reservation-form">
+      <form action="{% url "reservations" %}" method="post" id="reservation-form">
         {% csrf_token %}
 
         <fieldset>
